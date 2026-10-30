@@ -1,0 +1,60 @@
+{
+  "lore_all": {
+    "items": 16490,
+    "supporting_facts": 46204,
+    "supporting_documents": 38145,
+    "facts_per_supporting_document": 1.2113,
+    "candidate_sentences_per_item": 24.5363,
+    "documents_per_item": 5.7617,
+    "corpus_sentences": 404604,
+    "corpus_words": 6567053,
+    "corpus_words_millions": 6.5671
+  },
+  "lore_transposed": {
+    "items": 5897,
+    "supporting_facts": 14340,
+    "supporting_documents": 11794,
+    "facts_per_supporting_document": 1.2159,
+    "candidate_sentences_per_item": 14.3736,
+    "documents_per_item": 4.0,
+    "corpus_sentences": 84761,
+    "corpus_words": 1641904,
+    "corpus_words_millions": 1.6419
+  },
+  "hotpot_paired": {
+    "items": 5897,
+    "supporting_facts": 14340,
+    "supporting_documents": 11794,
+    "facts_per_supporting_document": 1.2159,
+    "candidate_sentences_per_item": 41.3388,
+    "documents_per_item": 9.9484,
+    "corpus_sentences": 243775,
+    "corpus_words": 5281791,
+    "corpus_words_millions": 5.2818
+  },
+  "hotpot_matched_layout": {
+    "items": 5897,
+    "supporting_facts": 14340,
+    "supporting_documents": 11794,
+    "facts_per_supporting_document": 1.2159,
+    "candidate_sentences_per_item": 15.2055,
+    "documents_per_item": 3.9927,
+    "corpus_sentences": 89819,
+    "corpus_words": 1938476,
+    "corpus_words_millions": 1.9385,
+    "documents_kept": 4,
+    "candidate_sentences_per_item_min": 15.1748,
+    "candidate_sentences_per_item_max": 15.2355,
+    "seeds": 5
+  },
+  "lorepedia": {
+    "articles": 97597,
+    "worlds": 61,
+    "sentences": 417075,
+    "words": 8021073,
+    "words_millions": 8.0211,
+    "sentences_per_article": 4.2734,
+    "words_per_article": 82.1857,
+    "articles_per_world": 1599.9508
+  }
+}

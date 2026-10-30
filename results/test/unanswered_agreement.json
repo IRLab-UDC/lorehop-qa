@@ -1,0 +1,145 @@
+{
+ "split": "test",
+ "models": [
+  "qwen",
+  "llama",
+  "gemma",
+  "olmo31",
+  "glm",
+  "phi",
+  "mistral"
+ ],
+ "f1_correct_threshold": 0.75,
+ "items_scored_by_all": 16490,
+ "chance_answerable_excluded": 3239,
+ "no_llm_correct": 412,
+ "no_llm_correct_containment_screened": 19,
+ "containment_screened_unanimous": 6,
+ "unanimous": 170,
+ "unanimous_share": 0.4126,
+ "disagreeing": 242,
+ "distinct_answers_distribution": {
+  "1": 170,
+  "2": 107,
+  "3": 50,
+  "4": 39,
+  "5": 24,
+  "6": 16,
+  "7": 6
+ },
+ "largest_cluster_distribution": {
+  "1": 6,
+  "2": 36,
+  "3": 40,
+  "4": 52,
+  "5": 39,
+  "6": 69,
+  "7": 170
+ },
+ "by_type": {
+  "bridge": {
+   "unanswered": 251,
+   "unanimous": 129
+  },
+  "chain": {
+   "unanswered": 72,
+   "unanimous": 25
+  },
+  "comparison": {
+   "unanswered": 65,
+   "unanimous": 6
+  },
+  "convergent": {
+   "unanswered": 24,
+   "unanimous": 10
+  }
+ },
+ "by_origin": {
+  "novel": {
+   "eligible": 8405,
+   "unanswered": 144,
+   "unanimous": 38,
+   "unanswered_rate": 0.0171,
+   "unanimous_share_of_unanswered": 0.2639
+  },
+  "transposed": {
+   "eligible": 4846,
+   "unanswered": 268,
+   "unanimous": 132,
+   "unanswered_rate": 0.0553,
+   "unanimous_share_of_unanswered": 0.4925
+  }
+ },
+ "by_generator": {
+  "Gemma": {
+   "eligible": 4004,
+   "unanswered": 122,
+   "unanimous": 42,
+   "unanswered_rate": 0.0305,
+   "unanimous_share_of_unanswered": 0.3443
+  },
+  "Llama": {
+   "eligible": 3089,
+   "unanswered": 103,
+   "unanimous": 42,
+   "unanswered_rate": 0.0333,
+   "unanimous_share_of_unanswered": 0.4078
+  },
+  "Qwen": {
+   "eligible": 4270,
+   "unanswered": 113,
+   "unanimous": 42,
+   "unanswered_rate": 0.0265,
+   "unanimous_share_of_unanswered": 0.3717
+  },
+  "allenai/Olmo-3.1-32B-Instruct": {
+   "eligible": 1888,
+   "unanswered": 74,
+   "unanimous": 44,
+   "unanswered_rate": 0.0392,
+   "unanimous_share_of_unanswered": 0.5946
+  }
+ },
+ "by_generator_and_origin": {
+  "Gemma/novel": {
+   "eligible": 2666,
+   "unanswered": 36,
+   "unanswered_rate": 0.0135
+  },
+  "Gemma/transposed": {
+   "eligible": 1338,
+   "unanswered": 86,
+   "unanswered_rate": 0.0643
+  },
+  "Llama/novel": {
+   "eligible": 1777,
+   "unanswered": 29,
+   "unanswered_rate": 0.0163
+  },
+  "Llama/transposed": {
+   "eligible": 1312,
+   "unanswered": 74,
+   "unanswered_rate": 0.0564
+  },
+  "Qwen/novel": {
+   "eligible": 2998,
+   "unanswered": 57,
+   "unanswered_rate": 0.019
+  },
+  "Qwen/transposed": {
+   "eligible": 1272,
+   "unanswered": 56,
+   "unanswered_rate": 0.044
+  },
+  "allenai/Olmo-3.1-32B-Instruct/novel": {
+   "eligible": 964,
+   "unanswered": 22,
+   "unanswered_rate": 0.0228
+  },
+  "allenai/Olmo-3.1-32B-Instruct/transposed": {
+   "eligible": 924,
+   "unanswered": 52,
+   "unanswered_rate": 0.0563
+  }
+ }
+}

@@ -1,0 +1,118 @@
+{
+  "lore10": {
+    "qwen": {
+      "items": 692,
+      "ablated_f1": 0.1093,
+      "closed_book_f1": 0.0366,
+      "difference": 0.0727,
+      "ci_low": 0.0563,
+      "ci_high": 0.0897
+    },
+    "llama": {
+      "items": 692,
+      "ablated_f1": 0.1003,
+      "closed_book_f1": 0.0321,
+      "difference": 0.0682,
+      "ci_low": 0.0513,
+      "ci_high": 0.0845
+    },
+    "gemma": {
+      "items": 692,
+      "ablated_f1": 0.0801,
+      "closed_book_f1": 0.0561,
+      "difference": 0.024,
+      "ci_low": 0.01,
+      "ci_high": 0.039
+    },
+    "olmo31": {
+      "items": 692,
+      "ablated_f1": 0.0971,
+      "closed_book_f1": 0.0319,
+      "difference": 0.0652,
+      "ci_low": 0.05,
+      "ci_high": 0.0804
+    },
+    "glm": {
+      "items": 692,
+      "ablated_f1": 0.1173,
+      "closed_book_f1": 0.0364,
+      "difference": 0.0809,
+      "ci_low": 0.0634,
+      "ci_high": 0.0984
+    },
+    "phi": {
+      "items": 692,
+      "ablated_f1": 0.095,
+      "closed_book_f1": 0.0336,
+      "difference": 0.0614,
+      "ci_low": 0.0472,
+      "ci_high": 0.076
+    },
+    "mistral": {
+      "items": 692,
+      "ablated_f1": 0.1545,
+      "closed_book_f1": 0.0485,
+      "difference": 0.106,
+      "ci_low": 0.0875,
+      "ci_high": 0.1248
+    }
+  },
+  "hotpot4": {
+    "qwen": {
+      "items": 1111,
+      "ablated_f1": 0.1963,
+      "closed_book_f1": 0.2272,
+      "difference": -0.0309,
+      "ci_low": -0.0559,
+      "ci_high": -0.0067
+    },
+    "llama": {
+      "items": 1111,
+      "ablated_f1": 0.1936,
+      "closed_book_f1": 0.275,
+      "difference": -0.0814,
+      "ci_low": -0.1067,
+      "ci_high": -0.0565
+    },
+    "gemma": {
+      "items": 1111,
+      "ablated_f1": 0.0941,
+      "closed_book_f1": 0.2289,
+      "difference": -0.1348,
+      "ci_low": -0.1571,
+      "ci_high": -0.1141
+    },
+    "olmo31": {
+      "items": 1111,
+      "ablated_f1": 0.1672,
+      "closed_book_f1": 0.1884,
+      "difference": -0.0212,
+      "ci_low": -0.0432,
+      "ci_high": 0.0004
+    },
+    "glm": {
+      "items": 1111,
+      "ablated_f1": 0.1492,
+      "closed_book_f1": 0.2121,
+      "difference": -0.0629,
+      "ci_low": -0.0861,
+      "ci_high": -0.0402
+    },
+    "phi": {
+      "items": 1111,
+      "ablated_f1": 0.1517,
+      "closed_book_f1": 0.126,
+      "difference": 0.0257,
+      "ci_low": 0.0077,
+      "ci_high": 0.0447
+    },
+    "mistral": {
+      "items": 1111,
+      "ablated_f1": 0.223,
+      "closed_book_f1": 0.2152,
+      "difference": 0.0078,
+      "ci_low": -0.0163,
+      "ci_high": 0.031
+    }
+  }
+}

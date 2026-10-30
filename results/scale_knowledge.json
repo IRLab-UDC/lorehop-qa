@@ -1,0 +1,44 @@
+{
+  "models": {
+    "qwen": {
+      "parameters_b": 27.0,
+      "hotpot_f1": 0.2746,
+      "lore_f1": 0.0331
+    },
+    "llama": {
+      "parameters_b": 70.0,
+      "hotpot_f1": 0.3426,
+      "lore_f1": 0.0252
+    },
+    "gemma": {
+      "parameters_b": 31.0,
+      "hotpot_f1": 0.2841,
+      "lore_f1": 0.0609
+    },
+    "olmo31": {
+      "parameters_b": 32.2,
+      "hotpot_f1": 0.2304,
+      "lore_f1": 0.0236
+    },
+    "glm": {
+      "parameters_b": 32.6,
+      "hotpot_f1": 0.2633,
+      "lore_f1": 0.036
+    },
+    "phi": {
+      "parameters_b": 14.7,
+      "hotpot_f1": 0.1435,
+      "lore_f1": 0.0239
+    },
+    "mistral": {
+      "parameters_b": 24.0,
+      "hotpot_f1": 0.2691,
+      "lore_f1": 0.0433
+    }
+  },
+  "n": 7,
+  "log_size_vs_hotpot_r": 0.875,
+  "log_size_vs_lore_r": -0.0504,
+  "size_vs_hotpot_r": 0.7855,
+  "size_vs_lore_r": -0.1876
+}

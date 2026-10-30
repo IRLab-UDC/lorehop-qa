@@ -1,0 +1,97 @@
+% E1: closed-book answer quality (no documents).
+\begin{tabular}{llccccc}
+\hline
+Reader family & Pool & \ds\ all & transposed & novel & HotpotQA (paired) & $\Delta$\\
+\hline
+Gemma 4 31B & yes & 0.168 & 0.140 & 0.184 & 0.367 & 0.227\\
+GLM-4 32B & no & 0.155 & 0.124 & 0.172 & 0.345 & 0.221\\
+Llama 3.3 70B & yes & 0.139 & 0.114 & 0.153 & 0.412 & 0.298\\
+Mistral Small 3.2 24B & no & 0.152 & 0.131 & 0.164 & 0.348 & 0.217\\
+OLMo 3.1 32B & yes & 0.132 & 0.097 & 0.151 & 0.303 & 0.206\\
+Phi-4 14B & no & 0.090 & 0.068 & 0.101 & 0.200 & 0.131\\
+Qwen3.6 27B & yes & 0.151 & 0.131 & 0.162 & 0.359 & 0.228\\
+\hline
+\end{tabular}
+
+% E2: answer F1 under full context, leave-one-out, and the closed-book floor.
+\begin{tabular}{llcccc}
+\hline
+Reader & Collection & Full & Leave-one-out & Floor & Drop\\
+\hline
+Gemma 4 31B & \ds\ (4 doc) & 0.941 & 0.611 & 0.168 & 0.329\\
+Gemma 4 31B & \ds\ (10 doc) & 0.931 & 0.546 & 0.168 & 0.385\\
+Gemma 4 31B & HotpotQA (4 doc) & 0.826 & 0.383 & 0.367 & 0.442\\
+Gemma 4 31B & HotpotQA (10 doc) & 0.816 & 0.433 & 0.367 & 0.382\\
+GLM-4 32B & \ds\ (4 doc) & 0.935 & 0.690 & 0.155 & 0.245\\
+GLM-4 32B & \ds\ (10 doc) & 0.905 & 0.649 & 0.155 & 0.256\\
+GLM-4 32B & HotpotQA (4 doc) & 0.807 & 0.532 & 0.345 & 0.275\\
+GLM-4 32B & HotpotQA (10 doc) & 0.789 & 0.527 & 0.345 & 0.262\\
+Llama 3.3 70B & \ds\ (4 doc) & 0.943 & 0.688 & 0.139 & 0.255\\
+Llama 3.3 70B & \ds\ (10 doc) & 0.920 & 0.643 & 0.139 & 0.277\\
+Llama 3.3 70B & HotpotQA (4 doc) & 0.812 & 0.544 & 0.412 & 0.268\\
+Llama 3.3 70B & HotpotQA (10 doc) & 0.784 & 0.545 & 0.412 & 0.240\\
+Mistral Small 3.2 24B & \ds\ (4 doc) & 0.931 & 0.709 & 0.152 & 0.221\\
+Mistral Small 3.2 24B & \ds\ (10 doc) & 0.910 & 0.672 & 0.152 & 0.238\\
+Mistral Small 3.2 24B & HotpotQA (4 doc) & 0.810 & 0.574 & 0.348 & 0.236\\
+Mistral Small 3.2 24B & HotpotQA (10 doc) & 0.783 & 0.557 & 0.348 & 0.226\\
+OLMo 3.1 32B & \ds\ (4 doc) & 0.911 & 0.627 & 0.132 & 0.284\\
+OLMo 3.1 32B & \ds\ (10 doc) & 0.864 & 0.565 & 0.132 & 0.299\\
+OLMo 3.1 32B & HotpotQA (4 doc) & 0.764 & 0.458 & 0.303 & 0.305\\
+OLMo 3.1 32B & HotpotQA (10 doc) & 0.698 & 0.454 & 0.303 & 0.243\\
+Phi-4 14B & \ds\ (4 doc) & 0.851 & 0.608 & 0.090 & 0.243\\
+Phi-4 14B & \ds\ (10 doc) & 0.797 & 0.528 & 0.090 & 0.269\\
+Phi-4 14B & HotpotQA (4 doc) & 0.712 & 0.436 & 0.200 & 0.276\\
+Phi-4 14B & HotpotQA (10 doc) & 0.663 & 0.420 & 0.200 & 0.243\\
+Qwen3.6 27B & \ds\ (4 doc) & 0.961 & 0.705 & 0.151 & 0.257\\
+Qwen3.6 27B & \ds\ (10 doc) & 0.939 & 0.665 & 0.151 & 0.274\\
+Qwen3.6 27B & HotpotQA (4 doc) & 0.832 & 0.562 & 0.359 & 0.269\\
+Qwen3.6 27B & HotpotQA (10 doc) & 0.819 & 0.567 & 0.359 & 0.252\\
+\hline
+\end{tabular}
+
+% E3: full-context reading with the official HotpotQA metrics.
+\begin{tabular}{llcccccc}
+\hline
+Reader & Subset & Ans EM & Ans F1 & Sup EM & Sup F1 & Joint F1 & Floor\\
+\hline
+Gemma 4 31B & all & 0.872 & 0.941 & 0.338 & 0.767 & 0.723 & 0.168\\
+Gemma 4 31B & transposed & 0.836 & 0.928 & 0.445 & 0.784 & 0.731 & 0.168\\
+Gemma 4 31B & novel & 0.893 & 0.949 & 0.279 & 0.757 & 0.719 & 0.168\\
+GLM-4 32B & all & 0.874 & 0.934 & 0.269 & 0.710 & 0.665 & 0.155\\
+GLM-4 32B & transposed & 0.832 & 0.921 & 0.384 & 0.756 & 0.699 & 0.155\\
+GLM-4 32B & novel & 0.897 & 0.941 & 0.205 & 0.685 & 0.645 & 0.155\\
+Llama 3.3 70B & all & 0.883 & 0.941 & 0.299 & 0.750 & 0.708 & 0.139\\
+Llama 3.3 70B & transposed & 0.836 & 0.924 & 0.380 & 0.767 & 0.711 & 0.139\\
+Llama 3.3 70B & novel & 0.909 & 0.950 & 0.254 & 0.741 & 0.706 & 0.139\\
+Mistral Small 3.2 24B & all & 0.866 & 0.930 & 0.294 & 0.728 & 0.678 & 0.152\\
+Mistral Small 3.2 24B & transposed & 0.839 & 0.922 & 0.398 & 0.761 & 0.703 & 0.152\\
+Mistral Small 3.2 24B & novel & 0.882 & 0.934 & 0.236 & 0.710 & 0.664 & 0.152\\
+OLMo 3.1 32B & all & 0.841 & 0.905 & 0.175 & 0.642 & 0.585 & 0.132\\
+OLMo 3.1 32B & transposed & 0.787 & 0.882 & 0.258 & 0.677 & 0.604 & 0.132\\
+OLMo 3.1 32B & novel & 0.872 & 0.918 & 0.129 & 0.623 & 0.574 & 0.132\\
+Phi-4 14B & all & 0.740 & 0.844 & 0.272 & 0.714 & 0.606 & 0.090\\
+Phi-4 14B & transposed & 0.666 & 0.810 & 0.351 & 0.731 & 0.599 & 0.090\\
+Phi-4 14B & novel & 0.781 & 0.863 & 0.228 & 0.704 & 0.610 & 0.090\\
+Qwen3.6 27B & all & 0.910 & 0.958 & 0.330 & 0.768 & 0.736 & 0.151\\
+Qwen3.6 27B & transposed & 0.877 & 0.946 & 0.420 & 0.782 & 0.741 & 0.151\\
+Qwen3.6 27B & novel & 0.929 & 0.965 & 0.279 & 0.760 & 0.733 & 0.151\\
+\hline
+\end{tabular}
+
+% Answer, supporting fact and joint F1: open-book and closed-book, by subset.
+\begin{tabular}{l|ccc|ccc||ccc|ccc|ccc}
+\toprule
+& \multicolumn{6}{c||}{\textbf{Open-book}} & \multicolumn{9}{c}{\textbf{Closed-book}} \\
+\cmidrule(lr){2-7} \cmidrule(lr){8-16}
+\textbf{Model} & \multicolumn{3}{c|}{\textbf{Novel}} & \multicolumn{3}{c||}{\textbf{Trans}} & \multicolumn{3}{c|}{\textbf{Novel}} & \multicolumn{3}{c|}{\textbf{Trans}} & \multicolumn{3}{c}{\textbf{HotpotQA}} \\
+& \textbf{Ans F1} & \textbf{SP F1} & \textbf{Joint F1} & \textbf{Ans F1} & \textbf{SP F1} & \textbf{Joint F1} & \textbf{Ans F1} & \textbf{SP F1} & \textbf{Joint F1} & \textbf{Ans F1} & \textbf{SP F1} & \textbf{Joint F1} & \textbf{Ans F1} & \textbf{SP F1} & \textbf{Joint F1} \\
+\midrule
+Gemma 4 31B & 0.949 & 0.757 & 0.719 & 0.928 & 0.784 & 0.731 & 0.184 & 0.000 & 0.000 & 0.140 & 0.000 & 0.000 & 0.367 & 0.000 & 0.000 \\
+GLM-4 32B & 0.941 & 0.685 & 0.645 & 0.921 & 0.756 & 0.699 & 0.172 & 0.000 & 0.000 & 0.124 & 0.000 & 0.000 & 0.345 & 0.000 & 0.000 \\
+Llama 3.3 70B & 0.950 & 0.741 & 0.706 & 0.924 & 0.767 & 0.711 & 0.153 & 0.000 & 0.000 & 0.114 & 0.000 & 0.000 & 0.412 & 0.000 & 0.000 \\
+Mistral Small 3.2 24B & 0.934 & 0.710 & 0.664 & 0.922 & 0.761 & 0.703 & 0.164 & 0.000 & 0.000 & 0.131 & 0.000 & 0.000 & 0.348 & 0.000 & 0.000 \\
+OLMo 3.1 32B & 0.918 & 0.623 & 0.574 & 0.882 & 0.677 & 0.604 & 0.151 & 0.000 & 0.000 & 0.097 & 0.000 & 0.000 & 0.303 & 0.000 & 0.000 \\
+Phi-4 14B & 0.863 & 0.704 & 0.610 & 0.810 & 0.731 & 0.599 & 0.101 & 0.000 & 0.000 & 0.068 & 0.000 & 0.000 & 0.200 & 0.000 & 0.000 \\
+Qwen3.6 27B & 0.965 & 0.760 & 0.733 & 0.946 & 0.782 & 0.741 & 0.162 & 0.000 & 0.000 & 0.131 & 0.000 & 0.000 & 0.359 & 0.000 & 0.000 \\
+\bottomrule
+\end{tabular}

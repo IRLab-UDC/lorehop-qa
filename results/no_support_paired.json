@@ -1,0 +1,118 @@
+{
+  "lore": {
+    "qwen": {
+      "n": 469,
+      "retrieved_f1": 0.1399,
+      "closed_book_f1": 0.0288,
+      "difference": 0.1111,
+      "ci_low": 0.0846,
+      "ci_high": 0.1379
+    },
+    "llama": {
+      "n": 469,
+      "retrieved_f1": 0.1236,
+      "closed_book_f1": 0.0282,
+      "difference": 0.0954,
+      "ci_low": 0.0711,
+      "ci_high": 0.1209
+    },
+    "gemma": {
+      "n": 469,
+      "retrieved_f1": 0.1012,
+      "closed_book_f1": 0.051,
+      "difference": 0.0502,
+      "ci_low": 0.0261,
+      "ci_high": 0.0744
+    },
+    "olmo31": {
+      "n": 469,
+      "retrieved_f1": 0.1105,
+      "closed_book_f1": 0.0161,
+      "difference": 0.0944,
+      "ci_low": 0.0718,
+      "ci_high": 0.1191
+    },
+    "glm": {
+      "n": 469,
+      "retrieved_f1": 0.1453,
+      "closed_book_f1": 0.0252,
+      "difference": 0.1202,
+      "ci_low": 0.0954,
+      "ci_high": 0.146
+    },
+    "phi": {
+      "n": 469,
+      "retrieved_f1": 0.0994,
+      "closed_book_f1": 0.0196,
+      "difference": 0.0799,
+      "ci_low": 0.0617,
+      "ci_high": 0.1
+    },
+    "mistral": {
+      "n": 469,
+      "retrieved_f1": 0.1413,
+      "closed_book_f1": 0.0314,
+      "difference": 0.1098,
+      "ci_low": 0.0837,
+      "ci_high": 0.1365
+    }
+  },
+  "hotpot": {
+    "qwen": {
+      "n": 112,
+      "retrieved_f1": 0.1156,
+      "closed_book_f1": 0.2133,
+      "difference": -0.0977,
+      "ci_low": -0.151,
+      "ci_high": -0.0507
+    },
+    "llama": {
+      "n": 112,
+      "retrieved_f1": 0.1299,
+      "closed_book_f1": 0.2606,
+      "difference": -0.1307,
+      "ci_low": -0.1966,
+      "ci_high": -0.0725
+    },
+    "gemma": {
+      "n": 112,
+      "retrieved_f1": 0.0573,
+      "closed_book_f1": 0.2058,
+      "difference": -0.1485,
+      "ci_low": -0.2122,
+      "ci_high": -0.0897
+    },
+    "olmo31": {
+      "n": 112,
+      "retrieved_f1": 0.1161,
+      "closed_book_f1": 0.1776,
+      "difference": -0.0616,
+      "ci_low": -0.1237,
+      "ci_high": -0.0012
+    },
+    "glm": {
+      "n": 112,
+      "retrieved_f1": 0.1028,
+      "closed_book_f1": 0.2203,
+      "difference": -0.1175,
+      "ci_low": -0.1816,
+      "ci_high": -0.0577
+    },
+    "phi": {
+      "n": 112,
+      "retrieved_f1": 0.0975,
+      "closed_book_f1": 0.1322,
+      "difference": -0.0347,
+      "ci_low": -0.0749,
+      "ci_high": 0.0071
+    },
+    "mistral": {
+      "n": 112,
+      "retrieved_f1": 0.1136,
+      "closed_book_f1": 0.2125,
+      "difference": -0.0989,
+      "ci_low": -0.157,
+      "ci_high": -0.043
+    }
+  }
+}

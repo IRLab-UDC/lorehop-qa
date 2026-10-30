@@ -1,0 +1,562 @@
+{
+ "bm25": {
+  "hotpot": {
+   "all_gold_in_top_10": 0.5913176191283703,
+   "documents": 53934,
+   "items": 5897,
+   "recall@10": 0.7848058334746482,
+   "recall@100": 0.9147871799219942,
+   "recall@2": 0.5557910802102765,
+   "recall@20": 0.8449211463455994,
+   "recall@5": 0.6945904697303714
+  },
+  "lore": {
+   "all_gold_in_top_10": 0.5636749545178896,
+   "documents": 95010,
+   "items": 16490,
+   "recall@10": 0.7634930260764067,
+   "recall@100": 0.9057357994744211,
+   "recall@2": 0.5504598746715201,
+   "recall@20": 0.8155548817465058,
+   "recall@5": 0.6996058217101241
+  }
+ },
+ "cross_collection_gap": {
+  "dense-jina": {
+   "fraction_closed": -0.0668,
+   "gap_adapted": 0.1581,
+   "gap_closed": -0.0099,
+   "gap_unadapted": 0.1482
+  },
+  "dense-minilm": {
+   "fraction_closed": 0.291,
+   "gap_adapted": 0.0631,
+   "gap_closed": 0.0259,
+   "gap_unadapted": 0.089
+  },
+  "dense-simcse": {
+   "fraction_closed": 0.1585,
+   "gap_adapted": 0.0965,
+   "gap_closed": 0.0182,
+   "gap_unadapted": 0.1147
+  },
+  "hybrid-jina": {
+   "fraction_closed": -0.0283,
+   "gap_adapted": 0.1227,
+   "gap_closed": -0.0034,
+   "gap_unadapted": 0.1193
+  },
+  "hybrid-minilm": {
+   "fraction_closed": 0.2628,
+   "gap_adapted": 0.0693,
+   "gap_closed": 0.0247,
+   "gap_unadapted": 0.0941
+  },
+  "hybrid-simcse": {
+   "fraction_closed": 0.0356,
+   "gap_adapted": 0.0726,
+   "gap_closed": 0.0027,
+   "gap_unadapted": 0.0753
+  }
+ },
+ "normalised_shortfall": {
+  "dense-jina": {
+   "fraction_recovered": -0.0794,
+   "shortfall_points_adapted": 17.67,
+   "shortfall_points_unadapted": 16.37
+  },
+  "dense-minilm": {
+   "fraction_recovered": 0.3698,
+   "shortfall_points_adapted": 5.76,
+   "shortfall_points_unadapted": 9.14
+  },
+  "dense-simcse": {
+   "fraction_recovered": 0.1837,
+   "shortfall_points_adapted": 10.8,
+   "shortfall_points_unadapted": 13.23
+  },
+  "hybrid-jina": {
+   "fraction_recovered": -0.0342,
+   "shortfall_points_adapted": 13.01,
+   "shortfall_points_unadapted": 12.58
+  },
+  "hybrid-minilm": {
+   "fraction_recovered": 0.3399,
+   "shortfall_points_adapted": 6.33,
+   "shortfall_points_unadapted": 9.59
+  },
+  "hybrid-simcse": {
+   "fraction_recovered": 0.0493,
+   "shortfall_points_adapted": 7.14,
+   "shortfall_points_unadapted": 7.51
+  }
+ },
+ "recipe": {
+  "batch_size": 64,
+  "corpus": "Lorepedia (released composition)",
+  "epochs": 1,
+  "learning_rate": 0.0001,
+  "note": "One configuration. Batch size, objective, data volume and which parameters are unfrozen were not swept; a flat result is a result for this recipe.",
+  "objective": "inverse cloze task, in-batch negatives",
+  "trainable_parameters": "input embeddings only; encoder frozen"
+ },
+ "relative_to_bm25": {
+  "hotpot-dense-jina-adapted2": {
+   "bm25_share_adapted": 1.0881,
+   "bm25_share_unadapted": 1.0896,
+   "delta_points": -0.15
+  },
+  "hotpot-dense-minilm-adapted2": {
+   "bm25_share_adapted": 0.8987,
+   "bm25_share_unadapted": 0.8995,
+   "delta_points": -0.09
+  },
+  "hotpot-dense-simcse-adapted2": {
+   "bm25_share_adapted": 0.6592,
+   "bm25_share_unadapted": 0.6417,
+   "delta_points": 1.75
+  },
+  "hotpot-hybrid-jina-adapted2": {
+   "bm25_share_adapted": 1.0945,
+   "bm25_share_unadapted": 1.093,
+   "delta_points": 0.15
+  },
+  "hotpot-hybrid-minilm-adapted2": {
+   "bm25_share_adapted": 0.9865,
+   "bm25_share_unadapted": 0.9806,
+   "delta_points": 0.59
+  },
+  "hotpot-hybrid-simcse-adapted2": {
+   "bm25_share_adapted": 0.8473,
+   "bm25_share_unadapted": 0.8404,
+   "delta_points": 0.69
+  },
+  "lore-dense-jina-adapted2": {
+   "bm25_share_adapted": 0.9114,
+   "bm25_share_unadapted": 0.9259,
+   "delta_points": -1.45
+  },
+  "lore-dense-minilm-adapted2": {
+   "bm25_share_adapted": 0.8411,
+   "bm25_share_unadapted": 0.8081,
+   "delta_points": 3.3
+  },
+  "lore-dense-simcse-adapted2": {
+   "bm25_share_adapted": 0.5512,
+   "bm25_share_unadapted": 0.5094,
+   "delta_points": 4.18
+  },
+  "lore-hybrid-jina-adapted2": {
+   "bm25_share_adapted": 0.9644,
+   "bm25_share_unadapted": 0.9672,
+   "delta_points": -0.29
+  },
+  "lore-hybrid-minilm-adapted2": {
+   "bm25_share_adapted": 0.9232,
+   "bm25_share_unadapted": 0.8847,
+   "delta_points": 3.85
+  },
+  "lore-hybrid-simcse-adapted2": {
+   "bm25_share_adapted": 0.7759,
+   "bm25_share_unadapted": 0.7653,
+   "delta_points": 1.06
+  }
+ },
+ "systems": {
+  "hotpot-dense-jina-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.7210445989486179,
+    "recall@10": 0.8539087671697473,
+    "recall@2": 0.6678819738850262,
+    "recall@20": 0.8539087671697473,
+    "recall@5": 0.7969306426996778
+   },
+   "collection": "hotpot",
+   "control": true,
+   "delta": {
+    "all_gold_in_top_10": -0.0014,
+    "recall@10": -0.0012,
+    "recall@2": -0.005,
+    "recall@20": -0.0012,
+    "recall@5": -0.0039
+   },
+   "embedder": "jina",
+   "strategy": "dense",
+   "unadapted": {
+    "all_gold_in_top_10": 0.7224012209598101,
+    "recall@10": 0.8550958114295405,
+    "recall@2": 0.6728845175512973,
+    "recall@20": 0.8550958114295405,
+    "recall@5": 0.8008309309818552
+   }
+  },
+  "hotpot-dense-minilm-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.47651348143123623,
+    "recall@10": 0.7052738680685094,
+    "recall@2": 0.5101746650839409,
+    "recall@20": 0.7052738680685094,
+    "recall@5": 0.6359165677463117
+   },
+   "collection": "hotpot",
+   "control": true,
+   "delta": {
+    "all_gold_in_top_10": 0.0022,
+    "recall@10": -0.0007,
+    "recall@2": -0.0053,
+    "recall@20": -0.0007,
+    "recall@5": -0.0025
+   },
+   "embedder": "minilm",
+   "strategy": "dense",
+   "unadapted": {
+    "all_gold_in_top_10": 0.474308970663049,
+    "recall@10": 0.7059521790741055,
+    "recall@2": 0.51551636425301,
+    "recall@20": 0.7059521790741055,
+    "recall@5": 0.6383754451415974
+   }
+  },
+  "hotpot-dense-simcse-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.24571816177717484,
+    "recall@10": 0.5173817195183992,
+    "recall@2": 0.34246226895031373,
+    "recall@20": 0.5173817195183992,
+    "recall@5": 0.4409869425131423
+   },
+   "collection": "hotpot",
+   "control": true,
+   "delta": {
+    "all_gold_in_top_10": 0.0085,
+    "recall@10": 0.0137,
+    "recall@2": 0.01,
+    "recall@20": 0.0137,
+    "recall@5": 0.0081
+   },
+   "embedder": "simcse",
+   "strategy": "dense",
+   "unadapted": {
+    "all_gold_in_top_10": 0.23723927420722402,
+    "recall@10": 0.5036459216550788,
+    "recall@2": 0.33245718161777177,
+    "recall@20": 0.5036459216550788,
+    "recall@5": 0.4328472104459895
+   }
+  },
+  "hotpot-hybrid-jina-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.7290147532643717,
+    "recall@10": 0.8589960997117179,
+    "recall@2": 0.6736476174325928,
+    "recall@20": 0.8589960997117179,
+    "recall@5": 0.8046464303883331
+   },
+   "collection": "hotpot",
+   "control": true,
+   "delta": {
+    "all_gold_in_top_10": 0.0032,
+    "recall@10": 0.0012,
+    "recall@2": -0.003,
+    "recall@20": 0.0012,
+    "recall@5": 0.0008
+   },
+   "embedder": "jina",
+   "strategy": "hybrid",
+   "unadapted": {
+    "all_gold_in_top_10": 0.7257927759877904,
+    "recall@10": 0.8578090554519248,
+    "recall@2": 0.6766152280820756,
+    "recall@20": 0.8578090554519248,
+    "recall@5": 0.803798541631338
+   }
+  },
+  "hotpot-hybrid-minilm-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.577920976767848,
+    "recall@10": 0.7742072240122096,
+    "recall@2": 0.5421400712226556,
+    "recall@20": 0.7742072240122096,
+    "recall@5": 0.6895879260641004
+   },
+   "collection": "hotpot",
+   "control": true,
+   "delta": {
+    "all_gold_in_top_10": 0.0073,
+    "recall@10": 0.0047,
+    "recall@2": -0.0042,
+    "recall@20": 0.0047,
+    "recall@5": 0.0005
+   },
+   "embedder": "minilm",
+   "strategy": "hybrid",
+   "unadapted": {
+    "all_gold_in_top_10": 0.5706291334576904,
+    "recall@10": 0.7695438358487366,
+    "recall@2": 0.5462947261319315,
+    "recall@20": 0.7695438358487366,
+    "recall@5": 0.6890791928099034
+   }
+  },
+  "hotpot-hybrid-simcse-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.4214007122265559,
+    "recall@10": 0.664999152111243,
+    "recall@2": 0.4134305579108021,
+    "recall@20": 0.664999152111243,
+    "recall@5": 0.5562998134644734
+   },
+   "collection": "hotpot",
+   "control": true,
+   "delta": {
+    "all_gold_in_top_10": 0.0088,
+    "recall@10": 0.0054,
+    "recall@2": 0.0079,
+    "recall@20": 0.0054,
+    "recall@5": 0.0025
+   },
+   "embedder": "simcse",
+   "strategy": "hybrid",
+   "unadapted": {
+    "all_gold_in_top_10": 0.41258266915380704,
+    "recall@10": 0.6595726640664745,
+    "recall@2": 0.40554519247074783,
+    "recall@20": 0.6595726640664745,
+    "recall@5": 0.5537561471934882
+   }
+  },
+  "lore-dense-jina-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.4520921770770164,
+    "recall@10": 0.6958560743885183,
+    "recall@2": 0.4776531231049121,
+    "recall@20": 0.6958560743885183,
+    "recall@5": 0.6164139882757226
+   },
+   "collection": "lore",
+   "control": false,
+   "delta": {
+    "all_gold_in_top_10": -0.0066,
+    "recall@10": -0.0111,
+    "recall@2": -0.0236,
+    "recall@20": -0.0111,
+    "recall@5": -0.0171
+   },
+   "embedder": "jina",
+   "strategy": "dense",
+   "unadapted": {
+    "all_gold_in_top_10": 0.45870224378411156,
+    "recall@10": 0.7069436021831413,
+    "recall@2": 0.50126339195472,
+    "recall@20": 0.7069436021831413,
+    "recall@5": 0.6334647260966243
+   }
+  },
+  "lore-dense-minilm-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.38635536688902367,
+    "recall@10": 0.6422073984232869,
+    "recall@2": 0.43059935314331915,
+    "recall@20": 0.6422073984232869,
+    "recall@5": 0.5618556701030928
+   },
+   "collection": "lore",
+   "control": false,
+   "delta": {
+    "all_gold_in_top_10": 0.0414,
+    "recall@10": 0.0252,
+    "recall@2": 0.0097,
+    "recall@20": 0.0252,
+    "recall@5": 0.0182
+   },
+   "embedder": "minilm",
+   "strategy": "dense",
+   "unadapted": {
+    "all_gold_in_top_10": 0.3449363250454821,
+    "recall@10": 0.6170002021427128,
+    "recall@2": 0.42091671720234486,
+    "recall@20": 0.6170002021427128,
+    "recall@5": 0.5436426116838488
+   }
+  },
+  "lore-dense-simcse-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.183262583383869,
+    "recall@10": 0.42084596725288054,
+    "recall@2": 0.24111582777440874,
+    "recall@20": 0.42084596725288054,
+    "recall@5": 0.34179805942995756
+   },
+   "collection": "lore",
+   "control": false,
+   "delta": {
+    "all_gold_in_top_10": 0.0259,
+    "recall@10": 0.0319,
+    "recall@2": 0.0109,
+    "recall@20": 0.0319,
+    "recall@5": 0.0203
+   },
+   "embedder": "simcse",
+   "strategy": "dense",
+   "unadapted": {
+    "all_gold_in_top_10": 0.15736810187992722,
+    "recall@10": 0.38892257934101476,
+    "recall@2": 0.23017485344653327,
+    "recall@20": 0.38892257934101476,
+    "recall@5": 0.32151809177279156
+   }
+  },
+  "lore-hybrid-jina-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.5085506367495451,
+    "recall@10": 0.736299777643016,
+    "recall@2": 0.4943551647463109,
+    "recall@20": 0.736299777643016,
+    "recall@5": 0.6479482514655346
+   },
+   "collection": "lore",
+   "control": false,
+   "delta": {
+    "all_gold_in_top_10": 0.0006,
+    "recall@10": -0.0022,
+    "recall@2": -0.018,
+    "recall@20": -0.0022,
+    "recall@5": -0.0093
+   },
+   "embedder": "jina",
+   "strategy": "hybrid",
+   "unadapted": {
+    "all_gold_in_top_10": 0.5079442086112795,
+    "recall@10": 0.738487972508591,
+    "recall@2": 0.5123357590458864,
+    "recall@20": 0.738487972508591,
+    "recall@5": 0.6572468162522741
+   }
+  },
+  "lore-hybrid-minilm-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.46397816858702245,
+    "recall@10": 0.7048615322417626,
+    "recall@2": 0.45769153022033554,
+    "recall@20": 0.7048615322417626,
+    "recall@5": 0.610329492621791
+   },
+   "collection": "lore",
+   "control": false,
+   "delta": {
+    "all_gold_in_top_10": 0.0433,
+    "recall@10": 0.0294,
+    "recall@2": 0.013,
+    "recall@20": 0.0294,
+    "recall@5": 0.0235
+   },
+   "embedder": "minilm",
+   "strategy": "hybrid",
+   "unadapted": {
+    "all_gold_in_top_10": 0.4206791995148575,
+    "recall@10": 0.6754800889427935,
+    "recall@2": 0.44466848595108144,
+    "recall@20": 0.6754800889427935,
+    "recall@5": 0.5867798665858096
+   }
+  },
+  "lore-hybrid-simcse-adapted2": {
+   "adapted": {
+    "all_gold_in_top_10": 0.336931473620376,
+    "recall@10": 0.5923893268647665,
+    "recall@2": 0.31518597129573483,
+    "recall@20": 0.5923893268647665,
+    "recall@5": 0.4694865575096018
+   },
+   "collection": "lore",
+   "control": false,
+   "delta": {
+    "all_gold_in_top_10": 0.0131,
+    "recall@10": 0.0081,
+    "recall@2": -0.0012,
+    "recall@20": 0.0081,
+    "recall@5": 0.0028
+   },
+   "embedder": "simcse",
+   "strategy": "hybrid",
+   "unadapted": {
+    "all_gold_in_top_10": 0.3238326258338387,
+    "recall@10": 0.5842834040832828,
+    "recall@2": 0.3164038811400849,
+    "recall@20": 0.5842834040832828,
+    "recall@5": 0.4667121487770366
+   }
+  }
+ },
+ "training": {
+  "jina-lp2": {
+   "articles": 97597,
+   "autocast_bfloat16": true,
+   "base_model": "jinaai/jina-embeddings-v5-text-small-retrieval",
+   "batch_size": 64,
+   "doc_prompt": "Document: ",
+   "epochs": 1.0,
+   "final_in_batch_accuracy": 0.84171875,
+   "final_loss": 0.5640423449873925,
+   "freeze_encoder": true,
+   "initial_in_batch_accuracy": 0.546875,
+   "initial_loss": 1.4926245212554932,
+   "lr": 0.0001,
+   "max_length": 256,
+   "objective": "ict",
+   "pooling": "last",
+   "query_max_length": 64,
+   "query_prompt": "Query: ",
+   "seed": 20260901,
+   "source": "lorepedia only; no item documents, questions or answers",
+   "steps": 1524,
+   "temperature": 0.05
+  },
+  "minilm-lp2-1ep": {
+   "articles": 97597,
+   "autocast_bfloat16": true,
+   "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+   "batch_size": 64,
+   "doc_prompt": "",
+   "epochs": 1.0,
+   "final_in_batch_accuracy": 0.695625,
+   "final_loss": 1.0685942852497101,
+   "freeze_encoder": true,
+   "initial_in_batch_accuracy": 0.453125,
+   "initial_loss": 2.1060659885406494,
+   "lr": 0.0001,
+   "max_length": 256,
+   "objective": "ict",
+   "pooling": "mean",
+   "query_max_length": 64,
+   "query_prompt": "",
+   "seed": 20260901,
+   "source": "lorepedia only; no item documents, questions or answers",
+   "steps": 1524,
+   "temperature": 0.05
+  },
+  "simcse-lp2": {
+   "articles": 97597,
+   "autocast_bfloat16": true,
+   "base_model": "princeton-nlp/unsup-simcse-bert-base-uncased",
+   "batch_size": 64,
+   "doc_prompt": "",
+   "epochs": 1.0,
+   "final_in_batch_accuracy": 0.7628125,
+   "final_loss": 0.9285008591413498,
+   "freeze_encoder": true,
+   "initial_in_batch_accuracy": 0.40625,
+   "initial_loss": 2.297517776489258,
+   "lr": 0.0001,
+   "max_length": 256,
+   "objective": "ict",
+   "pooling": "cls",
+   "query_max_length": 64,
+   "query_prompt": "",
+   "seed": 20260901,
+   "source": "lorepedia only; no item documents, questions or answers",
+   "steps": 1524,
+   "temperature": 0.05
+  }
+ }
+}

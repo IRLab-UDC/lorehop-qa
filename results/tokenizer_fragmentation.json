@@ -1,0 +1,85 @@
+{
+  "invented_names": 19195,
+  "real_world_names": 120637,
+  "invented_names_in_lorepedia": 5318,
+  "lorepedia_coverage_of_item_names": 0.2771,
+  "lorepedia_coverage_occurrence_weighted": 0.4944,
+  "coverage_by_item_frequency": {
+    "1": {
+      "names": 8112,
+      "in_lorepedia": 1304,
+      "share": 0.1607
+    },
+    "2-4": {
+      "names": 6612,
+      "in_lorepedia": 1808,
+      "share": 0.2734
+    },
+    "5-19": {
+      "names": 2640,
+      "in_lorepedia": 1354,
+      "share": 0.5129
+    },
+    "20+": {
+      "names": 1831,
+      "in_lorepedia": 852,
+      "share": 0.4653
+    }
+  },
+  "models": {
+    "jina": {
+      "model": "jinaai/jina-embeddings-v5-text-small-retrieval",
+      "vocab_size": 151643,
+      "invented": {
+        "names": 19195,
+        "mean_pieces": 3.277,
+        "single_token_share": 0.007,
+        "three_or_more_share": 0.7885,
+        "max_pieces": 9
+      },
+      "real_world": {
+        "names": 120637,
+        "mean_pieces": 2.903,
+        "single_token_share": 0.017,
+        "three_or_more_share": 0.6201,
+        "max_pieces": 17
+      }
+    },
+    "minilm": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "vocab_size": 30522,
+      "invented": {
+        "names": 19195,
+        "mean_pieces": 3.095,
+        "single_token_share": 0.0418,
+        "three_or_more_share": 0.7149,
+        "max_pieces": 10
+      },
+      "real_world": {
+        "names": 120637,
+        "mean_pieces": 2.685,
+        "single_token_share": 0.0871,
+        "three_or_more_share": 0.5229,
+        "max_pieces": 22
+      }
+    },
+    "simcse": {
+      "model": "princeton-nlp/unsup-simcse-bert-base-uncased",
+      "vocab_size": 30522,
+      "invented": {
+        "names": 19195,
+        "mean_pieces": 3.095,
+        "single_token_share": 0.0418,
+        "three_or_more_share": 0.7149,
+        "max_pieces": 10
+      },
+      "real_world": {
+        "names": 120637,
+        "mean_pieces": 2.685,
+        "single_token_share": 0.0871,
+        "three_or_more_share": 0.5229,
+        "max_pieces": 22
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "transposed_items": 1789,
+  "lore": {
+    "variants": 3578,
+    "answer_removed": 901,
+    "survival_rate": 0.7482
+  },
+  "cells": {
+    "qwen": {
+      "lore": {
+        "full": 0.9477,
+        "loo": 0.6671,
+        "ablated": 0.1017,
+        "ablated_variants": 693,
+        "vs_closed_book": 0.0651,
+        "ci_low": 0.0479,
+        "ci_high": 0.0823,
+        "null": false
+      },
+      "hotpot": {
+        "full": 0.8317,
+        "loo": 0.5624,
+        "ablated": 0.1963,
+        "ablated_variants": 1111,
+        "vs_closed_book": -0.0309,
+        "ci_low": -0.0559,
+        "ci_high": -0.0067,
+        "null": false
+      }
+    },
+    "llama": {
+      "lore": {
+        "full": 0.921,
+        "loo": 0.6384,
+        "ablated": 0.0948,
+        "ablated_variants": 693,
+        "vs_closed_book": 0.0628,
+        "ci_low": 0.0464,
+        "ci_high": 0.0796,
+        "null": false
+      },
+      "hotpot": {
+        "full": 0.8123,
+        "loo": 0.5442,
+        "ablated": 0.1936,
+        "ablated_variants": 1111,
+        "vs_closed_book": -0.0814,
+        "ci_low": -0.1067,
+        "ci_high": -0.0565,
+        "null": false
+      }
+    },
+    "gemma": {
+      "lore": {
+        "full": 0.9286,
+        "loo": 0.5188,
+        "ablated": 0.0724,
+        "ablated_variants": 693,
+        "vs_closed_book": 0.0164,
+        "ci_low": 0.0007,
+        "ci_high": 0.0313,
+        "null": false
+      },
+      "hotpot": {
+        "full": 0.8258,
+        "loo": 0.3835,
+        "ablated": 0.0941,
+        "ablated_variants": 1111,
+        "vs_closed_book": -0.1348,
+        "ci_low": -0.1571,
+        "ci_high": -0.1141,
+        "null": false
+      }
+    },
+    "olmo31": {
+      "lore": {
+        "full": 0.8837,
+        "loo": 0.5693,
+        "ablated": 0.0914,
+        "ablated_variants": 693,
+        "vs_closed_book": 0.0596,
+        "ci_low": 0.0452,
+        "ci_high": 0.0737,
+        "null": false
+      },
+      "hotpot": {
+        "full": 0.7637,
+        "loo": 0.4584,
+        "ablated": 0.1672,
+        "ablated_variants": 1111,
+        "vs_closed_book": -0.0212,
+        "ci_low": -0.0432,
+        "ci_high": 0.0004,
+        "null": true
+      }
+    },
+    "glm": {
+      "lore": {
+        "full": 0.9192,
+        "loo": 0.6575,
+        "ablated": 0.1028,
+        "ablated_variants": 693,
+        "vs_closed_book": 0.0665,
+        "ci_low": 0.0499,
+        "ci_high": 0.0838,
+        "null": false
+      },
+      "hotpot": {
+        "full": 0.8073,
+        "loo": 0.5321,
+        "ablated": 0.1492,
+        "ablated_variants": 1111,
+        "vs_closed_book": -0.0629,
+        "ci_low": -0.0861,
+        "ci_high": -0.0402,
+        "null": false
+      }
+    },
+    "phi": {
+      "lore": {
+        "full": 0.8127,
+        "loo": 0.5336,
+        "ablated": 0.0857,
+        "ablated_variants": 693,
+        "vs_closed_book": 0.0521,
+        "ci_low": 0.0384,
+        "ci_high": 0.0662,
+        "null": false
+      },
+      "hotpot": {
+        "full": 0.7121,
+        "loo": 0.4361,
+        "ablated": 0.1517,
+        "ablated_variants": 1111,
+        "vs_closed_book": 0.0257,
+        "ci_low": 0.0077,
+        "ci_high": 0.0447,
+        "null": false
+      }
+    },
+    "mistral": {
+      "lore": {
+        "full": 0.925,
+        "loo": 0.6815,
+        "ablated": 0.1375,
+        "ablated_variants": 693,
+        "vs_closed_book": 0.089,
+        "ci_low": 0.0714,
+        "ci_high": 0.1082,
+        "null": false
+      },
+      "hotpot": {
+        "full": 0.8104,
+        "loo": 0.574,
+        "ablated": 0.223,
+        "ablated_variants": 1111,
+        "vs_closed_book": 0.0078,
+        "ci_low": -0.0163,
+        "ci_high": 0.031,
+        "null": true
+      }
+    }
+  },
+  "hotpot": {
+    "variants": 3576,
+    "answer_removed": 1332,
+    "survival_rate": 0.6275
+  }
+}

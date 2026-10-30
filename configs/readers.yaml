@@ -1,0 +1,121 @@
+# The LoreHopQA reader panel for the paper's experiments. Sized for 80 GB GPUs.
+#
+# Seven families. Four served as generators or jurors during construction and
+# carry `pool: true`: qwen, llama, gemma and olmo31. The other three never took part and are the
+# controls: glm, phi and mistral. src/lorehopqa/panel.py
+# holds the same grouping for the analysis scripts; the two must agree.
+#
+# SCALE MATCHING.  Every pool-versus-control comparison is made at matched parameter count: glm
+# (32.6B) and mistral (24B) match qwen (27B), gemma (31B) and olmo31 (32B). llama at 70B has no
+# dense control twin in the panel.
+#
+# TENSOR PARALLELISM.  Every reader fits two A100s (llama: 70B FP8, ~35 GB per card), so each job
+# asks for two GPUs, and whole 4-GPU nodes are never needed. phi runs on one.
+#
+# DECODING.  Temperature 0 everywhere. These are measurements, not generations. max_tokens is
+# small because the reply is one short JSON object; a reader that needs more than 1024 tokens
+# for it has gone wrong in a way worth seeing as a truncation.
+
+readers:
+  - name: qwen
+    family: Qwen3.6 27B
+    model: Qwen/Qwen3.6-27B
+    pool: true
+    parameters_b: 27
+    temperature: 0.0
+    max_tokens: 1024
+    tensor_parallel_size: 2
+    max_model_len: 16384
+    max_num_seqs: 128
+    gpu_memory_utilization: 0.90
+    # Qwen3's thinking block fights grammar-constrained decoding; turn it off, as in the
+    # construction configs, so the reply is the object and nothing else.
+    chat_template_kwargs:
+      enable_thinking: false
+
+  - name: llama
+    family: Llama 3.3 70B
+    model: RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic
+    pool: true
+    parameters_b: 70
+    temperature: 0.0
+    max_tokens: 1024
+    tensor_parallel_size: 2
+    max_model_len: 16384
+    max_num_seqs: 128
+    gpu_memory_utilization: 0.90
+
+  - name: gemma
+    family: Gemma 4 31B
+    model: google/gemma-4-31B-it
+    pool: true
+    parameters_b: 31
+    temperature: 0.0
+    max_tokens: 1024
+    tensor_parallel_size: 2
+    max_model_len: 16384
+    max_num_seqs: 128
+    gpu_memory_utilization: 0.90
+
+  - name: mistral
+    family: Mistral Small 3.2 24B
+    model: mistralai/Mistral-Small-3.2-24B-Instruct-2506
+    pool: false            # a control: it took no part in construction
+    parameters_b: 24
+    temperature: 0.0
+    max_tokens: 1024
+    tensor_parallel_size: 2
+    max_model_len: 16384
+    max_num_seqs: 128
+    gpu_memory_utilization: 0.90
+    trust_remote_code: true
+    # The shared cache holds this model in Mistral's native format only.
+    engine_kwargs:
+      tokenizer_mode: mistral
+      config_format: mistral
+      load_format: mistral
+
+  - name: glm
+    family: GLM-4 32B
+    model: zai-org/GLM-4-32B-0414
+    pool: false
+    parameters_b: 32.6
+    temperature: 0.0
+    max_tokens: 1024
+    tensor_parallel_size: 2
+    max_model_len: 16384
+    max_num_seqs: 128
+    gpu_memory_utilization: 0.90
+
+  - name: olmo31
+    family: OLMo 3.1 32B
+    model: allenai/Olmo-3.1-32B-Instruct
+    pool: true             # a generator and juror during construction
+    parameters_b: 32.2
+    temperature: 0.0
+    # The panel's 16384-token window, not this model's 65536, so that it reads under the same
+    # conditions as the rest of the panel.
+    max_tokens: 1024
+    tensor_parallel_size: 2
+    max_model_len: 16384
+    max_num_seqs: 128
+    gpu_memory_utilization: 0.90
+
+  - name: phi
+    family: Phi-4 14B
+    model: microsoft/phi-4
+    pool: false
+    parameters_b: 14.7
+    temperature: 0.0
+    # A second control with the panel's own context window, unlike OLMo-2's 4096. Holding the
+    # window fixed matters here: a control that differs from the panel in how much context it
+    # can hold confounds what the control is meant to isolate.
+    max_tokens: 512
+    tensor_parallel_size: 1
+    max_model_len: 16384
+    max_num_seqs: 128
+    gpu_memory_utilization: 0.90
+
+# Items per checkpoint. The engine drains at each boundary, so this trades a little throughput
+# for how much a preempted job has to redo. 512 is roughly four minutes of work for a 27B.
+checkpoint_every: 512

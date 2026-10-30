@@ -1,0 +1,132 @@
+{
+  "lore": {
+    "qwen": {
+      "answer_slope": 0.615,
+      "answer_r": 0.974,
+      "sp_slope": 0.702,
+      "sp_r": 0.999,
+      "systems": 7,
+      "recall_min": 0.38892257934101476,
+      "recall_max": 0.7634930260764067
+    },
+    "llama": {
+      "answer_slope": 0.61,
+      "answer_r": 0.975,
+      "sp_slope": 0.704,
+      "sp_r": 0.999,
+      "systems": 7,
+      "recall_min": 0.38892257934101476,
+      "recall_max": 0.7634930260764067
+    },
+    "gemma": {
+      "answer_slope": 0.692,
+      "answer_r": 0.978,
+      "sp_slope": 0.715,
+      "sp_r": 0.998,
+      "systems": 7,
+      "recall_min": 0.38892257934101476,
+      "recall_max": 0.7634930260764067
+    },
+    "olmo31": {
+      "answer_slope": 0.6,
+      "answer_r": 0.976,
+      "sp_slope": 0.57,
+      "sp_r": 1.0,
+      "systems": 7,
+      "recall_min": 0.38892257934101476,
+      "recall_max": 0.7634930260764067
+    },
+    "glm": {
+      "answer_slope": 0.569,
+      "answer_r": 0.97,
+      "sp_slope": 0.646,
+      "sp_r": 0.998,
+      "systems": 7,
+      "recall_min": 0.38892257934101476,
+      "recall_max": 0.7634930260764067
+    },
+    "phi": {
+      "answer_slope": 0.531,
+      "answer_r": 0.96,
+      "sp_slope": 0.664,
+      "sp_r": 0.999,
+      "systems": 7,
+      "recall_min": 0.38892257934101476,
+      "recall_max": 0.7634930260764067
+    },
+    "mistral": {
+      "answer_slope": 0.54,
+      "answer_r": 0.964,
+      "sp_slope": 0.676,
+      "sp_r": 1.0,
+      "systems": 7,
+      "recall_min": 0.38892257934101476,
+      "recall_max": 0.7634930260764067
+    }
+  },
+  "hotpot": {
+    "qwen": {
+      "answer_slope": 0.603,
+      "answer_r": 0.994,
+      "sp_slope": 0.744,
+      "sp_r": 1.0,
+      "systems": 7,
+      "recall_min": 0.5036459216550788,
+      "recall_max": 0.8578090554519248
+    },
+    "llama": {
+      "answer_slope": 0.566,
+      "answer_r": 0.997,
+      "sp_slope": 0.738,
+      "sp_r": 0.999,
+      "systems": 7,
+      "recall_min": 0.5036459216550788,
+      "recall_max": 0.8578090554519248
+    },
+    "gemma": {
+      "answer_slope": 0.792,
+      "answer_r": 0.996,
+      "sp_slope": 0.747,
+      "sp_r": 1.0,
+      "systems": 7,
+      "recall_min": 0.5036459216550788,
+      "recall_max": 0.8578090554519248
+    },
+    "olmo31": {
+      "answer_slope": 0.54,
+      "answer_r": 0.992,
+      "sp_slope": 0.596,
+      "sp_r": 0.995,
+      "systems": 7,
+      "recall_min": 0.5036459216550788,
+      "recall_max": 0.8578090554519248
+    },
+    "glm": {
+      "answer_slope": 0.599,
+      "answer_r": 0.995,
+      "sp_slope": 0.687,
+      "sp_r": 0.999,
+      "systems": 7,
+      "recall_min": 0.5036459216550788,
+      "recall_max": 0.8578090554519248
+    },
+    "phi": {
+      "answer_slope": 0.514,
+      "answer_r": 0.992,
+      "sp_slope": 0.659,
+      "sp_r": 0.997,
+      "systems": 7,
+      "recall_min": 0.5036459216550788,
+      "recall_max": 0.8578090554519248
+    },
+    "mistral": {
+      "answer_slope": 0.523,
+      "answer_r": 0.995,
+      "sp_slope": 0.762,
+      "sp_r": 0.999,
+      "systems": 7,
+      "recall_min": 0.5036459216550788,
+      "recall_max": 0.8578090554519248
+    }
+  }
+}
